@@ -185,7 +185,7 @@ package away3d.core.render
 			_tempSkyboxMatrix.invert();
 			var q:Vector3D = Matrix3DUtils.transformVector(_tempSkyboxMatrix,p,Matrix3DUtils.CALCULATION_VECTOR3D);
 			_skyboxProjection.copyRowTo(3, p);
-			var a:Number = (q.x*p.x + q.y*p.y + q.z*p.z + q.w*p.w)/(cx*q.x + cy*q.y + cz*q.z + cw*q.w);
+			var a:Number = (q.x*p.x + q.y*p.y + q.z*p.z + q.w*p.w)/(cx*q.x + cy*q.y + cz*q.z + cw*q.w)*0.9;
 			_skyboxTempVector.x = cx*a;
 			_skyboxTempVector.y = cy*a;
 			_skyboxTempVector.z = cz*a;
